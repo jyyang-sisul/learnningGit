@@ -74,6 +74,11 @@ c:\workspace\git_test 폴더 생성
 				    디렉터리: C:\workspace\git_test
 
 
+	PS C:\workspace\git_test> git commit -a -m "git Ignore File Test"
+					[master 7236f33] git Ignore File Test
+					 1 file changed, 42 insertions(+)
+
+
 						Mode                LastWriteTime         Length Name
 						----                -------------         ------ ----
 						-a----     2017-12-20  오후 10:36              0 test.txt
@@ -93,3 +98,5 @@ c:\workspace\git_test 폴더 생성
 				        .gitignore
 
 					no changes added to commit (use "git add" and/or "git commit -a")
+
+	//
