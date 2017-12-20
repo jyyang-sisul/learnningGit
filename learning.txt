@@ -20,7 +20,10 @@ c:\workspace\git_test 폴더 생성
 
 	        learning.txt
 
-	PS C:\workspace\git_test> git add .\learning.txt
+	// 최초
+	PS C:\workspace\git_test> git add .\learning.txt					|	Tracked File
+
+	// git Add 했을 경우
 	PS C:\workspace\git_test> git status
 					On branch master					|
 												|			
@@ -28,5 +31,23 @@ c:\workspace\git_test 폴더 생성
 												|
 					Changes to be committed:				|		
 					  (use "git rm --cached <file>..." to unstage)		|
-												|	staging Area
+												|	Staging Area (Staged Filed)
 				        new file:   learning.txt				|
+
+	// Commit	
+	PS C:\workspace\git_test> git commit .\learning.txt -m "First Commit File"		|
+					[master (root-commit) 4fa4892] First Commit File	|
+					 1 file changed, 32 insertions(+)			|	(Committed File)	
+					 create mode 100644 learning.txt			|
+
+
+	// 수정했을 경우
+	PS C:\workspace\git_test> git status
+					On branch master
+					Changes not staged for commit:
+					  (use "git add <file>..." to update what will be committed)
+					  (use "git checkout -- <file>..." to discard changes in working directory)
+
+				        modified:   learning.txt
+
+					no changes added to commit (use "git add" and/or "git commit -a")
