@@ -1,0 +1,32 @@
+초기 설정
+	git config --global user.name "sky82e"
+	git config --global user.email "sky82e@naver.com"
+
+
+c:\workspace\git_test 폴더 생성
+
+	PS C:\workspace\git_test> git init
+					Initialized empty Git repository in C:/workspace/git_test/.git/
+
+	임의 파일 생성 후( learning.txt)
+
+	PS C:\workspace\git_test> git status
+		On branch master
+
+		No commits yet
+
+		Untracked files:
+		  (use "git add <file>..." to include in what will be committed)
+
+	        learning.txt
+
+	PS C:\workspace\git_test> git add .\learning.txt
+	PS C:\workspace\git_test> git status
+					On branch master					|
+												|			
+					No commits yet						|
+												|
+					Changes to be committed:				|		
+					  (use "git rm --cached <file>..." to unstage)		|
+												|	staging Area
+				        new file:   learning.txt				|
