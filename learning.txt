@@ -3,8 +3,8 @@
 	git config --global user.email "sky82e@naver.com"
 
 
-c:\workspace\git_test 폴더 생성
-
+	// c:\workspace\git_test 폴더 생성
+	PS C:\> New-Item -Path .\workspace\git_test -ItemType directory
 	PS C:\workspace\git_test> git init
 					Initialized empty Git repository in C:/workspace/git_test/.git/
 
@@ -79,6 +79,10 @@ c:\workspace\git_test 폴더 생성
 					 1 file changed, 42 insertions(+)
 
 
+
+
+
+
 						Mode                LastWriteTime         Length Name
 						----                -------------         ------ ----
 						-a----     2017-12-20  오후 10:36              0 test.txt
@@ -99,4 +103,79 @@ c:\workspace\git_test 폴더 생성
 
 					no changes added to commit (use "git add" and/or "git commit -a")
 
-	//
+	// commit
+	PS C:\workspace\git_test> git add .\test1.txt
+	PS C:\workspace\git_test> git commit .\test1.txt
+	PS C:\workspace\git_test> git rm .\test1.txt
+					rm 'test1.txt'
+
+	PS C:\workspace\git_test> ls
+
+
+				    디렉터리: C:\workspace\git_test
+
+
+					Mode                LastWriteTime         Length Name
+					----                -------------         ------ ----
+					-a----     2017-12-20  오후 10:35              8 .gitignore
+					-a----     2017-12-20  오후 10:51           3282 learning.txt
+					-a----     2017-12-20  오후 10:36              0 test.txt
+
+
+
+	PS C:\workspace\git_test> git status
+					On branch master
+					Changes to be committed:
+					  (use "git reset HEAD <file>..." to unstage)
+
+				        deleted:    test1.txt
+
+					Changes not staged for commit:
+					  (use "git add <file>..." to update what will be committed)
+					  (use "git checkout -- <file>..." to discard changes in working directory)
+
+				        modified:   learning.txt
+
+	// log
+	PS C:\workspace\git_test> git log
+					commit deaa6435a445c304e14f4d1b2e278c35c06777cd (HEAD -> master)
+					Author: sky82e <sky82e@naver.com>
+					Date:   Wed Dec 20 22:50:30 2017 +0900
+
+					    <EC><82><AD><EC><A0><9C> <ED><85><8C><EC><8A><A4><ED><8A><B8> <ED><8C><8C><EC><9D><BC>
+
+					commit eb2f4aebe10ca09e3929c99f6ac9b341202c3837
+					Author: sky82e <sky82e@naver.com>
+					Date:   Wed Dec 20 22:49:37 2017 +0900
+
+					    delete file
+
+						commit 67738936df95c2f37f8b0519336ca1a0b43a895d
+					
+					Author: sky82e <sky82e@naver.com>
+					Date:   Wed Dec 20 22:48:41 2017 +0900
+
+					    Second Commit File
+
+						commit 7236f337d22d0236446070457fd97353475a604d
+
+					Author: sky82e <sky82e@naver.com>	
+					Date:   Wed Dec 20 22:39:34 2017 +0900
+
+					    git Ignore File Test
+
+						commit 067a80852c976c87609a721911de65e93376e15f
+					
+					Author: sky82e <sky82e@naver.com>
+					Date:   Wed Dec 20 22:26:17 2017 +0900
+
+					    Modifed Commit File
+
+						commit 4fa48926a617e42ae3d07738980cbcf5ffe2ca32
+					Author: sky82e <sky82e@naver.com>
+					Date:   Wed Dec 20 22:21:26 2017 +0900
+
+					    First Commit File
+		// git log --stat 		#통계정보를 조회
+		// git log --pretty=oneline	#한줄 정리
+		// git log --pretty=format:"%h - %an, %ar :%s"	--graph
